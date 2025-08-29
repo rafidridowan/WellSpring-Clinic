@@ -1,4 +1,4 @@
-
+//for mobile
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-
+// mobile menu
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -45,9 +45,10 @@ function calculateBMI() {
     
     let bmi;
     if (isMetric) {
-       
+        // Metric: kg/m²
         bmi = weight / Math.pow(height / 100, 2);
-    } else
+    } else {
+        // Imperial: (lb * 703) / in²
         bmi = (weight * 703) / Math.pow(height, 2);
     }
     
@@ -76,9 +77,9 @@ function calculateBMI() {
     }
     
     result.style.display = 'block';
-
-
 }
+
+
 document.getElementById('appointment-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you! Your appointment request has been received. We will contact you shortly to confirm.');
@@ -89,5 +90,4 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you for your message. We will respond as soon as possible.');
     this.reset();
-
 });
