@@ -1,4 +1,4 @@
-//for mobile
+// Mobile Navigation
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -6,14 +6,14 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// mobile menu
+// Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
     });
 });
 
-
+// BMI Calculator
 let isMetric = true;
 const metricBtn = document.getElementById('metric-btn');
 const imperialBtn = document.getElementById('imperial-btn');
@@ -79,7 +79,7 @@ function calculateBMI() {
     result.style.display = 'block';
 }
 
-
+// Form Submissions
 document.getElementById('appointment-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you! Your appointment request has been received. We will contact you shortly to confirm.');
