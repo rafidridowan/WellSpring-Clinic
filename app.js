@@ -78,7 +78,7 @@ function calculateBMI() {
     result.style.display = 'block';
 
 
-
+}
 document.getElementById('appointment-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you! Your appointment request has been received. We will contact you shortly to confirm.');
@@ -89,4 +89,5 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you for your message. We will respond as soon as possible.');
     this.reset();
+
 });
